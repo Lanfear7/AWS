@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, "build")))
 
 
-app.get('/', async (req,res) => {
+app.get('/home', async (req,res) => {
     console.log('working')
     try{
         const images = await db.getImages()
